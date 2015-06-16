@@ -49,4 +49,9 @@ public class AddressBookTest {
     public void getOldestCheck() {
         assertThat(addressBookService.getOldest().get().getFullName()).isEqualTo("John Doe");
     }
+
+    @Test
+    public void getAgeDiff() {
+        assertThat(addressBookService.getAgeDiff("John1", "John2")).isEqualTo(31);
+    }
 }
