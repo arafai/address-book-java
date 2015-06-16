@@ -1,3 +1,5 @@
+package services;
+
 import org.joda.time.DateTime;
 
 public class AddressBook {
@@ -35,6 +37,13 @@ public class AddressBook {
     }
 
     public void setBirthDate(DateTime birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public AddressBook(String firstName, String lastName, boolean isMale, DateTime birthDate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.isMale = isMale;
         this.birthDate = birthDate;
     }
 }
