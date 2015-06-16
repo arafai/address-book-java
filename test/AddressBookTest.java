@@ -45,4 +45,10 @@ public class AddressBookTest {
         assertThat(addressBookService.countMales()).isEqualTo(3l);
 
     }
+
+    @Test
+    public void getOldestCheck() {
+        assertThat(addressBookService.getOldest().getFullName()).isEqualTo("John Doe");
+
+    }
 }
