@@ -7,5 +7,5 @@ public interface AddressBookService {
 
     Optional<AddressBook> getOldest();
 
-    Integer getAgeDiff(String firstName1, String firstName2);
+    Optional<Integer> getAgeDiff(String firstName1, String firstName2);
 }

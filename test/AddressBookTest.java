@@ -52,6 +52,10 @@ public class AddressBookTest {
 
     @Test
     public void getAgeDiff() {
-        assertThat(addressBookService.getAgeDiff("John1", "John2")).isEqualTo(31);
+        assertThat(addressBookService.getAgeDiff("John1", "John2").get()).isEqualTo(31);
+    }
+    @Test
+    public void getEmptyAgeDiff() {
+        assertThat(addressBookService.getAgeDiff("John1", "me").isPresent()).isEqualTo(false);
     }
 }
