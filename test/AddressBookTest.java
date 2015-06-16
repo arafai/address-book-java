@@ -42,7 +42,7 @@ public class AddressBookTest {
 
     @Test
     public void countMalesCheck() {
-        assertThat(addressBookService.countMales()).isEqualTo(3);
+        assertThat(addressBookService.countMales()).isEqualTo(3l);
 
     }
 }

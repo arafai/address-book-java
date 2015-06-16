@@ -1,7 +1,7 @@
 package services;
 
 public interface AddressBookService {
-    int countMales();
+    long countMales();
     AddressBook getOldest();
     Integer getAgeDiff();
 }

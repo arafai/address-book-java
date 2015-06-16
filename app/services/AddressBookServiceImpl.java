@@ -1,7 +1,7 @@
 package services;
 
 public class AddressBookServiceImpl implements AddressBookService {
-    private AddressBookDataService addressBookDataService;
+    private final AddressBookDataService addressBookDataService;
 
     public AddressBookServiceImpl(AddressBookDataService addressBookDataService) {
         this.addressBookDataService = addressBookDataService;
@@ -9,8 +9,11 @@ public class AddressBookServiceImpl implements AddressBookService {
 
 
     @Override
-    public int countMales() {
-        return 0;
+    public long countMales() {
+       return addressBookDataService.retrieveAll()
+                              .filter(ad -> ad.isMale())
+                              .count();
+
     }
 
     @Override
