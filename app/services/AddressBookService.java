@@ -1,7 +1,9 @@
 package services;
 
+import java.util.Optional;
+
 public interface AddressBookService {
     long countMales();
-    AddressBook getOldest();
+    Optional<AddressBook> getOldest();
     Integer getAgeDiff();
 }
